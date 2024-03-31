@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="container">
+    <object title="Welcome" type="image/svg+xml" data={"welcome.svg"} />
+</div>
+
+<style>
+    .container {
+        display: grid;
+        place-items: center;
+        height: 100dvh;
+    }
+</style>
+

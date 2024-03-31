@@ -3,5 +3,13 @@
 </script>
 
 <body>
-    <Install />
+    <div class="container">
+        <Install />
+    </div>
 </body>
+
+<style>
+    .container {
+        height: 800dvh;
+    }
+</style>

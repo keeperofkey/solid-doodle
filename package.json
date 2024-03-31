@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@lumaai/luma-web": "^0.2.2",
 		"three": "^0.163.0"
 	}
 }

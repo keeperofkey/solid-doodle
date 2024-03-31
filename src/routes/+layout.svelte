@@ -12,12 +12,13 @@
         padding: 1rem;
         border-radius: 0.5rem;
         box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        position: fixed;
     }
 
     nav a {
         color: #333;
         text-decoration: none;
-        font-family: sans-serif;
+        font-family: monospace;
         font-size: 1rem;
         font-weight: bold;
         padding: 0.5rem;

@@ -1,6 +1,7 @@
 <nav>
     <a href="/">Home</a>
     <a href="/install">Install</a>
+    <a href="/joya">Joya</a>
 </nav>
 
 <slot />

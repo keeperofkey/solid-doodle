@@ -8,7 +8,7 @@
     let camera: THREE.PerspectiveCamera,
         scene: THREE.Scene,
         renderer: THREE.WebGLRenderer;
-    let model: THREE.Object3D;
+    let model: THREE.Object3D<THREE.Event>;
     let mat: THREE.MeshBasicMaterial;
     let anim: THREE.AnimationClip[];
     let mixer: THREE.AnimationMixer;
@@ -152,11 +152,3 @@
         renderer.render(scene, camera);
     }
 </script>
-
-<style lang="scss">
-    $beaver: #8c7865ff;
-    $silver: #bababaff;
-    $dim-gray: #686862ff;
-    $jet: #2b2c2cff;
-    $battleship-gray: #87837eff;
-</style>

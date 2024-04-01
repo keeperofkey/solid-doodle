@@ -8,7 +8,7 @@
     let camera: THREE.PerspectiveCamera,
         scene: THREE.Scene,
         renderer: THREE.WebGLRenderer;
-    let model: THREE.Object3D<THREE.Event>;
+    let model: THREE.Object3D;
     let mat: THREE.MeshBasicMaterial;
     let anim: THREE.AnimationClip[];
     let mixer: THREE.AnimationMixer;
@@ -101,7 +101,7 @@
         //  console.log(action.time)
         //  console.log(scroll)
     }
-    let internalId: NodeJS.Timer;
+    let internalId: number;
 
     function onMouseDown() {
         // console.log('mouse down')

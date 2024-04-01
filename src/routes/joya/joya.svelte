@@ -7,7 +7,7 @@
     let camera: THREE.PerspectiveCamera,
         scene: THREE.Scene,
         renderer: THREE.WebGLRenderer;
-    let model: THREE.Object3D<THREE.Event>;
+    let model: THREE.Object3D;
     let mat: THREE.MeshBasicMaterial;
     let anim: THREE.AnimationClip[];
     let mixer: THREE.AnimationMixer;
@@ -75,6 +75,9 @@
         container.appendChild(renderer.domElement);
 
         const pmremGenerator = new THREE.PMREMGenerator(renderer);
+        const light = new THREE.AmbientLight();
+        light.position.set(0, 0, 0);
+        scene.add(light);
 
         scene.background = new THREE.Color(0xf5f5f5f5);
         scene.environment = pmremGenerator.fromScene(scene).texture;
@@ -150,11 +153,3 @@
         renderer.render(scene, camera);
     }
 </script>
-
-<style lang="scss">
-    $beaver: #8c7865ff;
-    $silver: #bababaff;
-    $dim-gray: #686862ff;
-    $jet: #2b2c2cff;
-    $battleship-gray: #87837eff;
-</style>

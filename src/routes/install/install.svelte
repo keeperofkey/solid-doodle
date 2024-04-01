@@ -3,7 +3,6 @@
 
     import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
     import { MeshoptDecoder } from "three/examples/jsm/libs/meshopt_decoder.module.js";
-    import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
     let camera: THREE.PerspectiveCamera,
         scene: THREE.Scene,
@@ -75,11 +74,13 @@
         renderer.toneMappingExposure = 1;
         container.appendChild(renderer.domElement);
 
-        const environment = new RoomEnvironment();
         const pmremGenerator = new THREE.PMREMGenerator(renderer);
+        const light = new THREE.AmbientLight();
+        light.position.set(0, 0, 0);
+        scene.add(light);
 
         scene.background = new THREE.Color(0xf5f5f5f5);
-        scene.environment = pmremGenerator.fromScene(environment).texture;
+        scene.environment = pmremGenerator.fromScene(scene).texture;
         // controls = new OrbitControls( camera, renderer.domElement );
         // controls.enableDamping = true;
         // controls.minDistance = 1;

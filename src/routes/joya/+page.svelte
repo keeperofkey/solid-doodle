@@ -1,7 +1,7 @@
 <script lang="ts">
     import Joya from "./joya.svelte";
     import Overlay from "./overlay.svelte";
-    import Splat from "./splat.svelte";
+    // import Splat from "./splat.svelte";
 </script>
 
 <body>
@@ -9,16 +9,16 @@
         <Joya />
     </div>
     <Overlay />
-    <div class="frame">
-        <Splat />
-    </div>
+    <!-- <div class="frame"> -->
+    <!--     <Splat /> -->
+    <!-- </div> -->
 </body>
 
 <style>
     .container {
         height: 800dvh;
     }
-    .frame {
-        padding-top: 1rem;
-    }
+    /* .frame { */
+    /*     padding-top: 1rem; */
+    /* } */
 </style>

@@ -59,8 +59,8 @@
                 // console.log(mixer)
                 document.addEventListener("scroll", onScroll);
                 // window.addEventListener( 'click', onClick );
-                window.addEventListener("mousedown", onMouseDown);
-                window.addEventListener("mouseup", onMouseUp);
+                // window.addEventListener("mousedown", onMouseDown);
+                // window.addEventListener("mouseup", onMouseUp);
                 window.addEventListener("resize", onWindowResize);
                 console.log(model);
                 scene.add(gltf.scene);
@@ -102,25 +102,25 @@
         //  console.log(action.time)
         //  console.log(scroll)
     }
-    let internalId: number;
-
-    function onMouseDown() {
-        // console.log('mouse down')
-        internalId = setInterval(() => {
-            if (scene.environment) {
-            }
-        }, 25);
-    }
-
-    function onMouseUp() {
-        // console.log('mouse up')
-        model.rotation.set(0, 0, 0);
-        clearInterval(internalId);
-    }
-
-    window.addEventListener("mousedown", onMouseDown);
-    window.addEventListener("mouseup", onMouseUp);
-
+    // let internalId: number;
+    //
+    // function onMouseDown() {
+    //     // console.log('mouse down')
+    //     internalId = setInterval(() => {
+    //         if (scene.environment) {
+    //         }
+    //     }, 25);
+    // }
+    //
+    // function onMouseUp() {
+    //     // console.log('mouse up')
+    //     model.rotation.set(0, 0, 0);
+    //     clearInterval(internalId);
+    // }
+    //
+    // window.addEventListener("mousedown", onMouseDown);
+    // window.addEventListener("mouseup", onMouseUp);
+    //
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();

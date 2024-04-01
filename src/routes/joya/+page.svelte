@@ -9,9 +9,9 @@
         <Joya />
     </div>
     <Overlay />
-    <div class="frame">
-        <Splat />
-    </div>
+    <!-- <div class="frame"> -->
+    <!--     <Splat /> -->
+    <!-- </div> -->
 </body>
 
 <style>

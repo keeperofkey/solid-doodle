@@ -8,7 +8,7 @@
 
 <style>
     nav {
-        background: #fff;
+        background: #ffffff;
         padding: 1rem;
         border-radius: 0.5rem;
         box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -16,7 +16,7 @@
     }
 
     nav a {
-        color: #333;
+        color: #333333;
         text-decoration: none;
         font-family: monospace;
         font-size: 1rem;
@@ -25,7 +25,7 @@
     }
 
     nav a:hover {
-        background: #eee;
+        background: #eeeeee;
         border-radius: 0.25rem;
     }
 </style>

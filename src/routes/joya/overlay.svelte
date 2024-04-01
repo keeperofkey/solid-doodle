@@ -5,26 +5,26 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img src="images/cans-1.png" alt="First image from artist residency" />
+    <img src="images/cans-1.webp" alt="First image from artist residency" />
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <img src="images/cans-2.png" alt="Second image from artist residency" />
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <!-- svelte-ignore a11y-img-redundant-alt -->
-
-    <img src="images/cans-3.png" alt="Third image from artist residency" />
+    <img src="images/cans-2.webp" alt="Second image from artist residency" />
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <!-- svelte-ignore a11y-img-redundant-alt -->
 
-    <img src="images/cans-5.png" alt="Fourth image from artist residency" />
+    <img src="images/cans-3.webp" alt="Third image from artist residency" />
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <!-- svelte-ignore a11y-img-redundant-alt -->
 
-    <img src="images/cans-7.png" alt="Fifth image from artist residency" />
+    <img src="images/cans-5.webp" alt="Fourth image from artist residency" />
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+    <!-- svelte-ignore a11y-img-redundant-alt -->
+
+    <img src="images/cans-7.webp" alt="Fifth image from artist residency" />
 </div>
 
 <style>

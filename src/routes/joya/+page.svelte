@@ -19,6 +19,6 @@
         height: 800dvh;
     }
     .frame {
-        padding-top: 1rem;
+        padding-top: 50rem;
     }
 </style>

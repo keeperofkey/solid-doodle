@@ -33,7 +33,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, 1fr);
         grid-template-rows: repeat(auto-fit, 1fr);
-        grid-row-gap: 1rem;
+        grid-row-gap: 50rem;
         max-width: 100dvw;
     }
     img {

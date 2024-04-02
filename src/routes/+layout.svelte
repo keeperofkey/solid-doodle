@@ -2,6 +2,7 @@
     <a href="/">Home</a>
     <a href="/install">Install</a>
     <a href="/joya">Joya</a>
+    <a href="/senior">Senior</a>
 </nav>
 
 <slot />

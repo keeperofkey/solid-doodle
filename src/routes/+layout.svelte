@@ -1,8 +1,8 @@
 <nav>
     <a href="/">Home</a>
-    <a href="/install">Install</a>
-    <a href="/joya">Joya</a>
-    <a href="/senior">Senior</a>
+    <a href="/installation">Mind your head</a>
+    <a href="/joya">Joya: AiR</a>
+    <a href="/nomenclature">Nomenclature</a>
 </nav>
 
 <slot />

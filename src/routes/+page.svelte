@@ -18,7 +18,7 @@
         height: 100dvh;
     }
     .warning {
-        position: fixed;
+        position: absolute;
         color: red;
         bottom: 0;
         right: 0;

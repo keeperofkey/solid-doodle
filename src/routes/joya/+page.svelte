@@ -5,13 +5,13 @@
 </script>
 
 <body>
+    <div class="frame">
+        <Splat />
+    </div>
     <div class="container">
         <Joya />
     </div>
     <Overlay />
-    <div class="frame">
-        <Splat />
-    </div>
 </body>
 
 <style>

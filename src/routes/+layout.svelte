@@ -3,6 +3,7 @@
     <a href="/installation">Mind your head</a>
     <a href="/joya">Joya: AiR</a>
     <a href="/nomenclature">Nomenclature</a>
+    <a href="/interior">interior</a>
 </nav>
 
 <slot />

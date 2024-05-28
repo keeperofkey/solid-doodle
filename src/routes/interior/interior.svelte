@@ -1,65 +1,42 @@
 <script lang="ts">
-    import { LumaSplatsSemantics, LumaSplatsThree } from "@lumaai/luma-web";
-    import * as THREE from "three";
-    import { OrbitControls } from "three/addons/controls/OrbitControls";
+    import * as SPLAT from "gsplat";
+    const scene = new SPLAT.Scene();
+    const camera = new SPLAT.Camera();
+    const renderer = new SPLAT.WebGLRenderer();
+    const controls = new SPLAT.OrbitControls(camera, renderer.canvas);
+    const color = new SPLAT.Color32(50, 50, 50, 0);
 
-    let scene = new THREE.Scene();
-    let camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000,
+    renderer.backgroundColor = color;
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.position = new SPLAT.Vector3(
+        -6.51976989357603,
+        -1.144404726108678,
+        -3.43753809993422,
     );
-    camera.position.z = 2;
-    const color = new THREE.Color(0xff0000);
-    let renderer = new THREE.WebGLRenderer();
-    let controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    renderer.domElement.style.position = "fixed";
-    renderer.domElement.style.zIndex = "-1";
-    renderer.domElement.style.width = "100%";
-    renderer.domElement.style.height = "100%";
+    camera.rotation = new SPLAT.Quaternion(
+        -0.07613025951148068,
+        0.5638710731365932,
+        0.05230734433708954,
+        0.8206811428288715,
+    );
 
-    document.body.appendChild(renderer.domElement);
-    // document.body.append(renderer.domElement);
-    const boxmin = new THREE.Vector3(-1, -1, -1);
-    const boxmax = new THREE.Vector3(1, 1, 1);
+    async function main() {
+        const url = "models/splat.splat";
 
-    let splats = new LumaSplatsThree({
-        source: "https://lumalabs.ai/capture/27130443-941d-430e-b68e-2e09bc0a4998",
-        particleRevealEnabled: false,
-    });
-    // splats.onLoad = () => {
-    //     splats.captureCubemap(renderer).then((capturedTexture) => {
-    //         scene.environment = capturedTexture;
-    //         scene.background = color;
-    //         scene.backgroundBlurriness = 5;
-    //     });
-    // };
-    scene.add(splats);
-    splats.semanticsMask = LumaSplatsSemantics.ALL;
-    splats.boundingBox.set(boxmin, boxmax);
-    splats.boundingBox.max = boxmax;
-    splats.boundingBox.min = boxmin;
-    console.log(splats);
+        await SPLAT.Loader.LoadAsync(url, scene, () => {});
 
-    function frameLoop() {
-        let canvas = renderer.domElement;
-        let width = canvas.clientWidth;
-        let height = canvas.clientHeight;
+        const frame = () => {
+            controls.update();
+            renderer.render(scene, camera);
+            console.log(camera.position, camera.rotation);
 
-        if (canvas.width !== width || canvas.height !== height) {
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-            renderer.setSize(width, height, false);
-        }
+            requestAnimationFrame(frame);
+        };
 
-        // controls.update();
-
-        renderer.render(scene, camera);
+        requestAnimationFrame(frame);
     }
 
-    renderer.setAnimationLoop(frameLoop);
+    main();
 </script>
 
 <style>
